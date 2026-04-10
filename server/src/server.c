@@ -9,7 +9,7 @@ int main(void) {
 
 	t_list* lista;
 	while (1) {
-		int cod_op = recibir_operacion(cliente_fd);
+		int cod_op = recibir_operacion(cliente_fd);  //recibir_operacion es bloqueante, en cada ciclo se queda aqui, hasta que recibir funcione
 		switch (cod_op) {
 		case MENSAJE:
 			recibir_mensaje(cliente_fd);
